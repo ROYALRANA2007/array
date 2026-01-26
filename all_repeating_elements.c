@@ -1,5 +1,5 @@
 #include <stdio.h>
-void all_non_repeating_elements(int arr[], int n)
+void all_epeating_elements(int arr[], int n)
 {
     int i, j, visited[100]={0};
     for (i = 0; i < n; i++)
@@ -16,7 +16,7 @@ void all_non_repeating_elements(int arr[], int n)
                 }
             }
         }
-            if(count==1)
+            if(count>1)
         printf(" %d",arr[i]);
         visited[arr[i]]=1;
         
