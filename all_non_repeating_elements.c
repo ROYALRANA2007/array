@@ -1,12 +1,13 @@
 #include <stdio.h>
 void all_non_repeating_elements(int arr[], int n)
 {
-    int i, j;
+    int i, j, visited[100]={0};
     for (i = 0; i < n; i++)
     {
         int count = 0, cur = arr[i];
         
-        
+        if (visited[arr[i]] != 1)
+        {
             for (j = 0; j < n; j++)
             {
                 if (arr[j] == cur)
@@ -14,8 +15,10 @@ void all_non_repeating_elements(int arr[], int n)
                     count++;
                 }
             }
-            if(count==1)
+        }
+            if(count>1)
         printf(" %d",arr[i]);
+        visited[arr[i]]=1;
         
         
         
