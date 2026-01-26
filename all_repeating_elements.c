@@ -16,7 +16,7 @@ void all_non_repeating_elements(int arr[], int n)
                 }
             }
         }
-            if(count>1)
+            if(count==1)
         printf(" %d",arr[i]);
         visited[arr[i]]=1;
         
